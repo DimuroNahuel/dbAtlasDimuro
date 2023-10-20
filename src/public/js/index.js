@@ -23,7 +23,6 @@ socketClient.on("productCreated", (product) => {
             <td>${product.title}</td>
             <td>${product.description}</td>
             <td>${product.price}</td>
-            <button class="delete-button" data-product-id=${product.id}}>Delete</button>
            
         </tr>`;
   table.innerHTML += row;
@@ -46,9 +45,7 @@ socketClient.on("updateProducts", (product) => {
         <td>${product.title}</td>
         <td>${product.description}</td>
         <td>${product.price}</td>
-        <td>
-          <button class="delete-button" data-product-id="${product.id}">Delete</button>
-        </td>
+
       </tr>`;
     table.innerHTML += row;
   });
